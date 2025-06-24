@@ -2,108 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stallion Steelworks</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      color: #facc15;
-      text-align: center;
+      font-family: 'Georgia', serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
     }
     header {
-      padding: 2rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(145deg, #ffd700 10%, #6b4aff 90%);
     }
     header img {
-      width: 250px;
+      max-width: 300px;
+      margin-bottom: 1rem;
     }
-    h1 {
-      font-size: 3rem;
-      color: #60a5fa;
-      text-shadow: 2px 2px 5px #000000;
-    }
-    p, li {
-      color: #c084fc;
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 0;
+      text-shadow: 2px 2px 4px #000;
     }
     main {
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
     section {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background-color: #2d2d2d;
-      border-radius: 1rem;
-      box-shadow: 0 0 10px #000000;
+      margin-bottom: 2.5rem;
     }
-    input[type="email"] {
-      padding: 0.5rem;
-      border-radius: 5px;
-      border: none;
-      margin-right: 0.5rem;
-      width: 250px;
+    h2 {
+      color: #ffd700;
+      border-bottom: 2px solid #6b4aff;
+      padding-bottom: 0.5rem;
     }
-    button {
-      padding: 0.6rem 1rem;
-      background-color: #facc15;
-      color: #000000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #eab308;
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
     }
     footer {
-      margin-top: 3rem;
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
-      color: #60a5fa;
+      color: #bbb;
+    }
+    .email-info {
+      background-color: #111;
+      border: 1px solid #444;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      color: #ccc;
+    }
+    .email-info a {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+    .coming-soon {
+      background: #181818;
+      border: 2px dashed #6b4aff;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 12px;
+    }
+    .coming-soon h2 {
+      color: #6b4aff;
+      font-style: italic;
+    }
+    .coming-soon p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="./pics/B.png" alt="Stallion Steelworks Logo">
+    <img src="./pics/B.png" alt="Stallion Steelworks Logo" />
     <h1>Stallion Steelworks</h1>
-    <p>Arizona's Trusted Equine Facility Contractors</p>
+    <p>Arizona's Premier Equine Facility Contractor</p>
   </header>
 
   <main>
     <section>
-      <h2>What We Build</h2>
-      <p>We specialize in custom steel structures for horse properties, including:</p>
-      <ul style="list-style: none; padding-left: 0;">
-        <li>• Steel Barns</li>
-        <li>• Mare Motels</li>
-        <li>• Corrals</li>
-        <li>• Horse Shade Structures</li>
+      <h2>Our Services</h2>
+      <ul>
+        <li>Custom Steel Barns</li>
+        <li>Mare Motels</li>
+        <li>Corral Design and Installation</li>
+        <li>Durable Horse Shade Structures</li>
+        <li>Licensed and Insured Steel Erection Contractors</li>
       </ul>
     </section>
 
     <section>
       <h2>Stay Updated</h2>
-      <p>Sign up to receive updates about new events, offers, and seasonal sales.</p>
-      <form onsubmit="subscribe(event)">
-        <input type="email" id="email" placeholder="Your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-      <p style="margin-top: 1rem;">Or email us directly at <a href="mailto:stallionsteelworks@gmail.com" style="color: #93c5fd; text-decoration: underline;">stallionsteelworks@gmail.com</a></p>
+      <div class="email-info">
+        <p>To stay informed about events, offers, and launch updates, email us directly at:</p>
+        <p><a href="mailto:stallionsteelworks@gmail.com">stallionsteelworks@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section class="coming-soon">
+      <h2>Forging the Future of Equine Estates</h2>
+      <p>
+        We're hard at work bringing premium equine infrastructure to life. Our next generation of craftsmanship is on the horizon — engineered with precision, designed with passion, and built to endure.
+        <br><br>
+        Check back soon or drop us an email to be part of what's coming.
+      </p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Stallion Steelworks. Licensed Contractor in Arizona.
+    &copy; 2025 Stallion Steelworks | Serving Horse Properties Across Arizona | <a href="mailto:stallionsteelworks@gmail.com">stallionsteelworks@gmail.com</a>
   </footer>
 
-  <script>
-    function subscribe(event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      alert(`Subscribed with ${email}`);
-      document.getElementById("email").value = "";
-    }
-  </script>
 </body>
 </html>
